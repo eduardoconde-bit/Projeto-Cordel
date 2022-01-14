@@ -1,6 +1,6 @@
 let dateSystem = new Date();
 
-function load() { //Carrega os objetos e chama a função dinamicTheme()
+function load() { //Carrega os objetos necessários
     bodyPage = document.getElementById('body-page');
     main = document.getElementsByTagName('main');
     headerPage = document.getElementById('top');
@@ -12,7 +12,6 @@ function load() { //Carrega os objetos e chama a função dinamicTheme()
 }
 
 function darkTheme() { //Função muda tema do site
-    if(dateSystem.getHours() >= 18 || (dateSystem.getHours() < 6))  {
         main[0].style.padding = '0 4px 0';
         bodyPage.style.backgroundColor = 'var(--background-page-dark)';
         headerPage.style.backgroundColor = 'var(--header-dark)';
@@ -30,10 +29,8 @@ function darkTheme() { //Função muda tema do site
             link[cont].style.color = 'var(--color-link-dark)'; //Cor links
         }
     }
-}
 
 function lightTheme() { //Função muda tema do site
-    if(dateSystem.getHours() >= 18 || (dateSystem.getHours() < 6))  {
         main[0].style.padding = '0';
         bodyPage.style.backgroundColor = 'var(--background-page)';
         headerPage.style.backgroundColor = 'var(--color2)';
@@ -51,4 +48,3 @@ function lightTheme() { //Função muda tema do site
             link[cont].style.color = 'var(--color1)'; //Cor links
         }
     }
-}

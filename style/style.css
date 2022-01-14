@@ -69,21 +69,32 @@ header#top  {
 }
 
 #container-theme-options {
-    display: flex;
-    max-width: 250px;
+    font: normal 1.2em var(--font-title);
+    max-width: 230px;
     padding: 5px;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.highlight-theme-option:hover {
+    color: var(--color-link-dark);
+}
+
 #input-dark {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 5px;
 }
 
 #input-light {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 5px;
+}
+
+#dark-theme, #light-theme {
+    margin-left: 5px;
 }
 
 /*Bloco Principal*/
@@ -113,6 +124,17 @@ header#top  {
     background: var(--background-image-text) var(--image2) center center fixed;
     overflow: auto;
 }
+/*(Images) For screen <= 1280px*/
+@media only screen and (max-width: 1280px){
+    #image-block-1 {
+        background: var(--background-image-text) var(--image1-1280)no-repeat center center fixed;
+        background-size: cover;
+    }
+    #image-block-2 {
+        background: var(--background-image-text) var(--image2-1280)no-repeat center center fixed;
+        background-size: cover;
+    }
+}
 
 .background-paragraph {
     background-color: #4e4e4eb3;
@@ -133,20 +155,14 @@ header#top  {
     margin-bottom: 5%;
 }
 
-@media screen and (max-width: 600px), handheld and (orientation: landscape) {
+/*For mobile devices width <= 600px*/
+@media only screen and (max-width: 600px) {
     .text-block {
         font: 1.2em /40px var(--font-page);
     }
 
     .background-paragraph {
         max-width: 250px;
-    }
-
-    #image-block-1 {
-        background: var(--background-image-text) var(--image1-1280) center center fixed;
-    }
-    #image-block-2 {
-        background: var(--background-image-text) var(--image2-1280) center center fixed;
     }
 }
 
@@ -163,8 +179,8 @@ header#top  {
     color: var(--color1);
     text-align: center;
 }
-/*Footer for mobile devices*/
-@media screen and (max-width: 480px){
+/*Mobile Devices  <= 480px*/
+@media only screen and (max-width: 480px){
     .text-footer {
         font-size: 0.9em;
     }
@@ -185,4 +201,9 @@ header#top  {
         display: inline-block;
         width: 100px;
     }
+
+    #dark-theme, #light-theme {
+        margin-left: 0;
+    }
+    
 }
