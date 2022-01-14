@@ -16,8 +16,13 @@
     --color1: #fff;
     --color2: #000;
     --background-page: #e2e2e2;
+    --background-page-dark: #222222;
     --background-image-text: #000000;
+    --header-dark: #111111;
+    --header-box-shadow: #fff5;
+    --wrapper-border-dark: #ffffff77;
     --color-link: #FF4500;
+    --color-link-dark: #daa520;
     --image1: url('../images/background001.jpg');
     --image2: url('../images/background002.jpg');
     --image1-1280: url('../images/background001-1280.jpg');
@@ -61,6 +66,24 @@ header#top  {
     font: 1.2em Arial ,sans-serif;
     margin: 0px 0 30px;
     text-align: center;
+}
+
+#container-theme-options {
+    display: flex;
+    max-width: 250px;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#input-dark {
+    display: inline-block;
+    padding: 5px;
+}
+
+#input-light {
+    display: inline-block;
+    padding: 5px;
 }
 
 /*Bloco Principal*/
@@ -148,5 +171,18 @@ header#top  {
 
     #sub-title-main {
         font-size: 0.9em;
+    }
+
+    #container-theme-options {
+        display: flex;
+        max-width: 250px;
+        padding: 5px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .distance-input {
+        display: inline-block;
+        width: 100px;
     }
 }
